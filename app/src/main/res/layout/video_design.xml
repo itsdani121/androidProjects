@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/LightYellow"
+    android:padding="@dimen/_16sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="@string/timeDuration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/videoView"
+            app:layout_constraintEnd_toEndOf="@id/videoView" />
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@string/Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@id/videoSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/videoView"
+            app:layout_constraintTop_toTopOf="@id/videoView" />
+
+        <TextView
+            android:id="@+id/videoSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/size"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toTopOf="@id/videoPath"
+            app:layout_constraintEnd_toEndOf="@id/videoTitle"
+            app:layout_constraintStart_toStartOf="@id/videoTitle"
+            app:layout_constraintTop_toBottomOf="@id/videoTitle" />
+
+        <TextView
+
+            android:id="@+id/videoPath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/path"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/videoMore"
+            app:layout_constraintEnd_toEndOf="@id/videoSize"
+            app:layout_constraintStart_toStartOf="@id/videoSize"
+            app:layout_constraintTop_toBottomOf="@id/videoSize" />
+
+        <ImageView
+            android:id="@+id/videoMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/videoPath"
+            app:layout_constraintTop_toBottomOf="@id/videoPath" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
