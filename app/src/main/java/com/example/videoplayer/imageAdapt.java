@@ -100,8 +100,8 @@ public class imageAdapt extends RecyclerView.Adapter<imageAdapt.viewHolder> {
     }
 
     public static class viewHolder extends RecyclerView.ViewHolder {
-        private TextView textViewTitle, textViewPath, textViewSize, img_menu;
-        private ImageView imageView;
+        private TextView textViewTitle, textViewPath, textViewSize;
+        private ImageView imageView,img_menu;
 
         viewHolder(@NonNull View itemView) {
             super(itemView);
